@@ -38,6 +38,5 @@ d.rounded_rectangle([80,y,80+d.textlength("BUSINESS FOR SALE",font=f2)+40,y+46],
 d.text((80,y+70),"LTO-accredited driving academy",font=f1,fill="#EEF3FA");d.text((80,y+140),"Batangas City, Philippines",font=f1,fill="#FFC845")
 d.text((80,H-70),"teamaces.johnnybodegas.com  |  Documents on request (NDA)",font=f3,fill="#94A3B8")
 im.save(O/"og.png",optimize=True)
-ic=Image.new("RGBA",(256,256),(0,0,0,0));g=ImageDraw.Draw(ic);g.rounded_rectangle([0,0,255,255],48,fill="#0B2A5B");g.rounded_rectangle([0,200,255,255],0,fill=None)
-fa=ImageFont.truetype(FB,150);g.text((128,128),"TA",font=fa,fill="#F5B301",anchor="mm")
+ic=Image.open("assets/logo-shield.png").convert("RGBA")
 ic.save(O/"favicon.ico",sizes=[(16,16),(32,32),(48,48)]);ic.resize((32,32)).save(O/"favicon-32.png");ic.convert("RGB").resize((180,180)).save(O/"apple-touch-icon.png")
