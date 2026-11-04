@@ -5,7 +5,8 @@ veh=[("Car 1","car"),("Car 2","car"),("Car 3","car"),("Motorcycle 1","motorcycle
 def vcard(i,n,k):
     if k=="car":
         return f'<div class="card ph-card rv" style="--d:{i*80}ms"><div class="slot slot-img"><img src="assets/vehicles/car-{i+1}.webp" loading="lazy" alt="TeamAces Driving Academy training car {i+1}, white and black livery"></div><h3>{n}</h3><p>[Add make / model / year]</p><span class="tag tag-ph">Details on request</span></div>'
-    return f'<div class="card ph-card rv" style="--d:{i*80}ms"><div class="slot"><div>{CAM}Photo on request</div></div><h3>{n}</h3><p>[Add make / model / year]</p><span class="tag tag-ph">Details on request</span></div>'
+    j=i-3; mk=["Honda Click","Honda TMX"][j]
+    return f'<div class="card ph-card rv" style="--d:{i*80}ms"><div class="slot slot-img"><img src="assets/vehicles/motorcycle-{j+1}.webp" loading="lazy" alt="{mk} motorcycle, illustrative manufacturer photo"></div><h3>{n}</h3><p>{mk} [confirm model / year]</p><span class="tag tag-ph">Illustrative photo</span></div>'
 vehicles="".join(vcard(i,n,k) for i,(n,k) in enumerate(veh))
 team=[("jay","Jerickson Baes","Coach Jay","Chief Instructor",12),("ronnel","Ronnel Pasia","Coach Ronnel","Driving Instructor",11),("ericson","Ericson Hernandez","Coach Ericson","Driving Instructor",10),("noel","Noel Perez","Coach Noel","Theoretical and Practical Driving Instructor",6),("marlon","Marlon T. Balbuena","Coach Marlon","Operations Manager &amp; Instructor",6),("janica","Janica Dimaunahan","Janica","Accounting Staff &amp; Admin",6),("kim","Kim De Chavez","Coach Kim","Driving Instructor",2)]
 emps="".join(f'<figure class="card person rv" style="--d:{i*70}ms"><img src="assets/team/{s}.jpg" width="400" height="500" loading="lazy" alt="{n}, {r}"><figcaption><span class="yrs">{y} yrs</span><h3>{n}</h3><p>{r}</p></figcaption></figure>' for i,(s,n,c,r,y) in enumerate(team))
