@@ -1,0 +1,10 @@
+const D = require("../data.js"); const assert = require("assert");
+const t = (n, f) => { f(); console.log("PASS", n); };
+t("main total 16677201", () => assert.strictEqual(D.mainTotal, 16677201));
+t("combined monthly 900000", () => assert.strictEqual(D.combinedMonthly, 900000));
+t("fee monthly 45000", () => assert.strictEqual(D.feeMonthly, 45000));
+t("fee annual 540000 = fee2025", () => { assert.strictEqual(D.feeAnnual, 540000); assert.strictEqual(D.fee2025, D.feeAnnual); });
+t("fee 2026 YTD = 540000*293/365 (Jan1-Oct20)", () => { const days = (Date.UTC(2026,9,20)-Date.UTC(2026,0,1))/864e5+1; assert.strictEqual(days, 293); assert.strictEqual(Math.round(540000*days/365*100)/100, D.fee2026ytd); });
+t("fee total 973479.45", () => assert.strictEqual(D.feeTotal, 973479.45));
+t("grand total 17650680.45", () => assert.strictEqual(D.grandTotal, 17650680.45));
+t("peso format", () => assert.strictEqual(D.peso(D.grandTotal), "\u20B117,650,680.45"));
