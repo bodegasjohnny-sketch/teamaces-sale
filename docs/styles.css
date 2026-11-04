@@ -103,3 +103,24 @@ html.no-js .rv{opacity:1;transform:none}
 .person .yrs{position:absolute;top:12px;right:12px;background:var(--amber-500,#F5B301);color:#061B3C;font-weight:700;font-size:13px;padding:4px 10px;border-radius:999px}
 @media (max-width:980px){.person{flex-basis:calc(50% - 8px)}}
 @media (max-width:420px){.person{flex-basis:100%}}
+
+.founder{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:0;padding:0;overflow:hidden;margin:0 0 20px;border-color:rgba(245,179,1,.45)}
+.founder img{display:block;width:100%;height:100%;object-fit:cover}
+.founder figcaption{padding:28px 30px;align-self:center}
+.founder h3{font-size:clamp(22px,3vw,30px);margin:6px 0 10px}
+.founder p{font-size:15.5px}
+.founder blockquote{margin:16px 0 0;padding:14px 18px;border-left:3px solid var(--amber-500,#F5B301);background:rgba(255,255,255,.04);border-radius:0 12px 12px 0;color:#EEF3FA;font-style:italic;font-size:15px}
+.founder cite{display:block;margin-top:8px;font-style:normal;font-weight:600;color:var(--amber-400,#FFC845);font-size:13.5px}
+.banner{margin:0 0 20px;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.banner img{display:block;width:100%;height:auto}
+.aw-ic{width:34px;height:34px;color:var(--amber-400,#FFC845);margin-bottom:10px}.aw-ic svg{width:100%;height:100%}
+@media (max-width:700px){.founder{grid-template-columns:1fr}.founder img{aspect-ratio:4/5;height:auto}}
+
+.aw-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:0 0 22px}
+.aw-tile{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#081C48;transition:border-color .3s,transform .3s}
+.aw-tile:hover{border-color:rgba(245,179,1,.5);transform:translateY(-3px)}
+.aw-tile img{display:block;width:100%;height:auto;aspect-ratio:1}
+.aw-titles{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.aw-titles li{padding:8px 14px;border-radius:999px;border:1px solid rgba(245,179,1,.3);background:rgba(245,179,1,.06);color:#EEF3FA;font-size:13.5px;font-weight:600}
+@media (max-width:900px){.aw-grid{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:560px){.aw-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
